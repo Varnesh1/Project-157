@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+        <script src = './suba.js'></script>
+        <script src = './coins.js'></script>
+        <script src = './game.js'></script>
+        <a-assets timeout = '1000'>
+            <a-asset-item src = './fantasy_island/scene.gltf' id = 'island' >
+            </a-asset-item>
+            <a-asset-item src="" id="scuba"></a-asset-item>
+            <a-asset-item src="" id="coins"></a-asset-item>
+
+
+        </a-assets>
+      </head>
+      <body>
+<a-camera position = '0 50 50'></a-camera>
+        <a-scene background = 'color:blue' game>
+
+<a-entity gltf-model = '#island' position = '30 -50 0' rotation = '0 0 0' scale = '1 1 1' scuba></a-entity>
+<a-entity gltf-model = '#scuba' position = '0 5 0' rotation = '0 0 0' scale = '1 1 1' scuba></a-entity>
+<a-entity gltf-model = '#scuba'scale = '1 1 1' coins></a-entity>
+
+
+
+  <a-entity
+    position="-25 20 0"
+    text="font:aileronsemibold; align: center; width: 30; color: black; value:Scuba Dive"
+  ></a-entity>
+  <a-entity position="-23.5 19 0">
+    <a-entity
+      text="font: aileronsemibold; width: 12; color: black; value: TIME\nREMAINING"
+    ></a-entity>
+    <a-entity
+      id="timer"
+      position="-10 0 0"
+      text="font:aileronsemibold; align: center; width: 30; color: black; value: 00:00"
+    ></a-entity>
+  </a-entity>
+
+  <a-entity position="-18 19 0">
+    <a-entity
+      position=""
+      text="font: aileronsemibold; width: 13; color: black; value: TRAGETS\nREMAINING"
+    ></a-entity>
+    <a-entity
+      id="targets"
+      position="-8 0 0"
+      text="font:aileronsemibold; align: center; width: 30; color: black; value: 10"
+    ></a-entity>
+  </a-entity>
+
+  <a-entity position="27 21 0">
+    <a-entity
+      position=""
+      text="font: exo2bold; align: center; width: 30; color: black; value: SCORE"
+    ></a-entity>
+    <a-entity
+      id="score"
+      position="0 -2 0"
+      text="font: exo2bold; align: center; width: 40; color: black; value: 0"
+    ></a-entity>
+  </a-entity>
+</a-entity>
+        </a-scene>
+        
+      </body>
+</html>
